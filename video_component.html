@@ -9,14 +9,14 @@
         <link rel="stylesheet" href="viewer.css" type="text/css">
     </head>
     <body>
-        <div class="root">
+        <div class="root" id="rootdiv">
 
             <div class="smash-stats-extension hide">
                 
                 <div class="dismiss-button-toggler">
                     <div class="dock">
                         <div class="dismiss-button-wrapper hide">
-                            <button class="dismiss-button" onclick="$('div.root').addClass('hide');">
+                            <button class="dismiss-button" id="dismissbutton">
                                 <div class="dismiss-button-svg">
                                     <svg class="dismiss-svg-asset" xmlns="http://www.w3.org/2000/svg" width="5.5em" height="5.5em" viewBox="0 0 24 24">
                                         <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>

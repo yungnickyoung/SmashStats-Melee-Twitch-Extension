@@ -80,6 +80,10 @@ $('div.dismiss-button-toggler').mouseleave(function () {
     $('div.dismiss-button-wrapper').removeClass('show');
 });
 
+$('#dismissbutton').click(function () {
+    $('#rootdiv').addClass('hide');
+});
+
 $('div.toggle-button').click(function () {
     $('div.slider').toggle('size', { origin: ["top", "right"] }, 200);
     sliderIsCollapsed = !sliderIsCollapsed;
