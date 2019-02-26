@@ -21,8 +21,6 @@ function validateData(data) {
     $('#textPlayer1Name').attr('title', p1Name);
     $('#textPlayer2Name').attr('title', p2Name);
 
-    // console.log("players: " + data.textPlayer1Name + "|||" + data.textPlayer2Name);
-
     // Ensure all statistics received from EBS are integers; otherwise makes them blank
     for (var key in data) {
         val = data.key;
@@ -36,7 +34,6 @@ function updateStatsFromConfig() {
     if (typeof twitch.configuration.broadcaster === 'undefined') {
         return;
     }
-    // console.log(twitch.configuration.broadcaster);
     content = twitch.configuration.broadcaster.content;
     updateStats(content);
 }
@@ -47,19 +44,14 @@ function sanitizeString(str){
 }
 
 twitch.onAuthorized(function (auth) {
-    // console.log('authorized');
     // save our credentials
     token = auth.token;
     client_id = auth.clientId;
-    // console.log(token);
-    // console.log(client_id);
     updateStatsFromConfig();
 });
 
 twitch.listen('broadcast', function (topic, contentType, message) {
-    // console.log('Recv ' + topic + ' ' + contentType + ' ' + message);
     if (topic === "broadcast") {
-        // console.log('Broadcast received');
         updateStats(message);
     }
 });

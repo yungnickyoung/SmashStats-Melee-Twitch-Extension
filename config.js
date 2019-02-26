@@ -3,7 +3,6 @@ var client_id = "";
 
 const twitch = window.Twitch.ext;
 const targetURL = 'https://www.getsmashstats.com/'
-// const targetURL = 'http://localhost:5001/'
 
 function createRequest(type, method, params) {
     return {
