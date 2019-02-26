@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SmashStats Config</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+        <link rel="stylesheet" href="viewer.css" type="text/css">
+    </head>
+    <body>
+        <div class="root" style="display: block">
+            <form method="GET" id="config-form">
+                <div style="vertical-align: middle">
+                    <label style="display: block; padding-top: 10px; padding-bottom: 5px; color: #a4aaae; font-weight: bold">Enter the player names you want viewers to see matchup data for.</label>
+                    <br />
+                    <input type="text" name="player1Name" value="Player1" id="inputPlayer1Name" style="width:200px">
+                    <input type="text" name="player2Name" value="Player2" id="inputPlayer2Name" style="width:200px">
+                    <input type="submit" value="Update" id="update-submit" style="cursor:pointer" disabled="disabled">
+                </div>
+            </form>
+
+            <p id="configResponse" style="color: #a4aaae"></p>
+        </div>
+        <script src="jquery-3.3.1.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="config.js"></script>
+    </body>
+</html>
